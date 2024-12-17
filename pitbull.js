@@ -22,3 +22,18 @@ botonEnviar.addEventListener('click', (event) => {
 });
 
 
+function updateTime() {
+    let now = new Date();
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
+    
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+  
+    document.getElementById('time').innerHTML = `${hours}:${minutes}:${seconds}`;
+  }
+  
+  setInterval(updateTime, 1000);
+
+
